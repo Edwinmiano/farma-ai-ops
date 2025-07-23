@@ -1,11 +1,12 @@
-import { DashboardLayout } from "@/components/layout/DashboardLayout"
-import Dashboard from "./Dashboard"
+import { RoleSwitcher } from "@/components/RoleSwitcher"
 
 const Index = () => {
   return (
-    <DashboardLayout>
-      <Dashboard />
-    </DashboardLayout>
+    <div className="min-h-screen bg-gradient-subtle p-6">
+      <div className="max-w-6xl mx-auto">
+        <RoleSwitcher />
+      </div>
+    </div>
   );
 };
 

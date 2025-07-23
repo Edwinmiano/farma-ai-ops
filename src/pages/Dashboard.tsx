@@ -1,3 +1,4 @@
+import { DashboardLayout } from "@/components/layout/DashboardLayout"
 import { DashboardStats } from "@/components/dashboard/DashboardStats"
 import { QuickActions } from "@/components/dashboard/QuickActions"
 import { RecentActivity } from "@/components/dashboard/RecentActivity"
@@ -35,7 +36,7 @@ function AlertCard({ title, message, type = "warning" }: {
   )
 }
 
-export default function Dashboard() {
+function DashboardContent() {
   const currentDate = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -121,5 +122,13 @@ export default function Dashboard() {
         </CardContent>
       </Card>
     </div>
+  )
+}
+
+export default function Dashboard() {
+  return (
+    <DashboardLayout>
+      <DashboardContent />
+    </DashboardLayout>
   )
 }
